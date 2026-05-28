@@ -1,0 +1,30 @@
+# .xrayctl.yaml — drop in your project root, or point XRAY_TOOLKIT_CONFIG to it.
+#
+# This file holds env-variable NAMES and PATHS only. Real secrets live in
+# your shell environment (~/.zshrc, .envrc, ~/.claude/.env, etc.). Never
+# commit secrets here.
+
+# Optional: name of an env var that holds an HTTP/SOCKS5 proxy URL used by
+# `xrayctl net ...` commands by default.
+default_proxy_env: HTTP_PROXY
+
+# Optional: hints for cross-checking access to a Remnawave panel.
+# xrayctl itself does not call the panel — that's the job of the separate
+# TrackLine/mcp-remnawave MCP server. These names are surfaced to your AI
+# agent so it knows which env vars to check before recommending panel ops.
+remnawave:
+  base_url_env: REMNAWAVE_BASE_URL
+  token_env: REMNAWAVE_API_TOKEN
+  readonly: true
+
+# Project-specific reminders. The bundled Claude skill prints these as
+# guardrails when generating configs. Keep them factual and current.
+notes:
+  - "Example: geosite/geoip URLs must point to Loyalsoldier CDN, not the client's built-in dataset."
+  - "Example: Hiddify-Windows fails on xhttp Reality; prefer Happ for that profile."
+  - "Example: Reality cascade keypair must be derived via `xray x25519`, not reused."
+
+# Optional: paths to project-owned templates that should override built-ins.
+templates:
+  singbox: ./templates/singbox.json
+  mihomo: ./templates/mihomo.yaml

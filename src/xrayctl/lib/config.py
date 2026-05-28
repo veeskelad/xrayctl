@@ -22,7 +22,7 @@ class RemnawaveConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     base_url_env: str = "REMNAWAVE_BASE_URL"
-    token_env: str = "REMNAWAVE_API_TOKEN"
+    token_env: str = "REMNAWAVE_API_TOKEN"  # noqa: S105  # env-var NAME, not a secret value
     readonly: bool = True
 
 

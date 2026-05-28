@@ -36,9 +36,6 @@ htmlcov/
 .tox/
 .nox/
 
-# uv
-uv.lock
-
 # Editors
 .vscode/
 .idea/

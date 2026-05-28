@@ -131,10 +131,18 @@ secrets. Real credentials live in your shell/`.env` file.
   reachability metrics.
 - v0.3.0+: web-UI playground, headless probe via embedded sing-box.
 
+## Decisions
+
+xrayctl uses [Architecture Decision Records](docs/decisions/INDEX.md) for
+consequential choices (license, packaging, dependencies, deprecations).
+Start with [the index](docs/decisions/INDEX.md) to understand why the
+project is shaped the way it is.
+
 ## Contributing
 
-Issues and PRs welcome. Conventional commits, MIT-only dependencies, no
-project-specific data in fixtures (`example.com`, RFC-5737 IPs only).
+Issues and PRs welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the ADR
+workflow, dev setup, and house style (conventional commits, MIT-only
+dependencies, generic fixtures only).
 
 ## License
 
